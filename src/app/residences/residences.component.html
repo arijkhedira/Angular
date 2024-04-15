@@ -1,0 +1,37 @@
+<div *ngFor="let residence of listResidences" class="residence-card">
+    <h2>{{ residence.name }}</h2>
+    <p>{{ residence.address }}</p>
+    <img [src]="residence.image" alt="Residence Image" />
+    <button (click)="showApartments(residence)">Show Apartments</button>
+  
+    <div *ngIf="apartments.length > 0; else noApartments" class="apartments-list">
+      <div *ngFor="let apartment of apartments" class="apartment-card">
+        <p>Apartment: {{ apartment.appartNum }}</p>
+        <p>Floor: {{ apartment.floorNum }}</p>
+        <p>Surface: {{ apartment.surface }}</p>
+        <button (click)="addToFavorites(apartment)">Like</button>
+    </div>
+    </div>
+  
+    <ng-template #noApartments>
+      <p>No Apartments found</p>
+    </ng-template>
+  </div>
+  
+  <div class="filter-container">
+    <input type="number" [(ngModel)]="searchSurface" placeholder="Search by surface" />
+    <button (click)="filterApartmentsBySurface()">Search</button>
+  </div>
+
+  <div class="favorites-list">
+    <h3>Favorite Apartments</h3>
+    <div *ngIf="favorites.length > 0">
+      <div *ngFor="let favorite of favorites" class="apartment-card">
+        <p>Apartment: {{ favorite.appartNum }}</p>
+        <p>Floor: {{ favorite.floorNum }}</p>
+        <p>Surface: {{ favorite.surface }}</p>
+        <button (click)="removeFromFavorites(favorite)">Remove</button>
+      </div>
+    </div>
+    <p *ngIf="favorites.length === 0">No favorite apartments.</p>
+  </div>

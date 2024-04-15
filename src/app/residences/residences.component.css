@@ -1,0 +1,78 @@
+.residence-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .residence-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .residence-card p {
+    margin-bottom: 5px;
+  }
+  
+  .residence-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .residence-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .apartments-list {
+    margin-top: 10px;
+  }
+  
+  .apartment-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .apartment-card p {
+    margin-bottom: 5px;
+  }
+  
+  .apartment-card button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .filter-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .filter-container input[type="number"] {
+    padding: 6px 12px;
+    margin-right: 10px;
+  }
+  
+  .filter-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
