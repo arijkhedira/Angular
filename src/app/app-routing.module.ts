@@ -1,11 +1,30 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ResidencesComponent } from './residences/residences.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
+import { ResidenceComponent } from './residence/residence.component';
+import { ApartementComponent } from './apartement/apartement.component';
+import { FormComponent } from './form/form.component';
+import { FormAppartmentComponent } from './form-appartment/form-appartment.component';
 
 const routes: Routes = [
-  { path: 'residences', component: ResidencesComponent },
-  // Ajoutez d'autres routes ici
-  { path: '', redirectTo: '/residences', pathMatch: 'full' } // Redirige vers la page des résidences par défaut
+  // path par defaut
+  {path : '' , redirectTo : 'home', pathMatch : 'full'},
+  {path : 'home', component: HomeComponent},
+  {path : 'product' ,  component : ProductComponent},
+  {path : 'residence' ,  component : ResidenceComponent},
+  {path : 'login' ,  component : FormComponent},
+  {path: 'AprtementForm',component: FormAppartmentComponent},
+
+// route parametré
+  {path : 'detail/:id', component: DetailProductComponent},
+  {path : 'apartement/:id', component: ApartementComponent},
+  // route Not found
+  {path : '**' , component: NotFoundComponent},
+
+
 ];
 
 @NgModule({

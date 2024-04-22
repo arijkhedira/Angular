@@ -1,21 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TableauProduitsComponent } from './tableau-produits/tableau-produits.component';
-import { ResidencesComponent } from './residences/residences.component';
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
+import { ResidenceComponent } from './residence/residence.component';
+import { ApartementComponent } from './apartement/apartement.component';
+import { FormComponent } from './form/form.component';
+import { FormAppartmentComponent } from './form-appartment/form-appartment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableauProduitsComponent,
-    ResidencesComponent,
+    HomeComponent,
+    ProductComponent,
+    NavbarComponent,
+    NotFoundComponent,
+    DetailProductComponent,
+    ResidenceComponent,
+    ApartementComponent,
+    FormComponent,
+    FormAppartmentComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot([]) // Configuration du routage
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
